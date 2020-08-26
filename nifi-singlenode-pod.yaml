@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nifi-pod
+  labels:
+    app: nifi-app
+    type: front-end
+
+spec:
+  containers:
+    - name: nifi-container
+      image: apache/nifi:latest
