@@ -10,3 +10,6 @@ spec:
   containers:
     - name: nifi-container
       image: apache/nifi:latest
+      ports:
+        - containerPort: 8080
+          protocol: TCP

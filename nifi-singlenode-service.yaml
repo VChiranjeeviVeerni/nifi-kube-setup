@@ -8,6 +8,7 @@ spec:
   ports:
     - targetPort: 8080
       port: 8080
+      name: nifiui
       nodePort: 30008
   selector:
     app: nifi-app
