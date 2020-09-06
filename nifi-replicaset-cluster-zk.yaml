@@ -20,10 +20,10 @@ spec:
       name: s2s
   type: LoadBalancer
 ---
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nifi-deployment
+  name: my-nifi
 spec:
   replicas: 3
   selector:
