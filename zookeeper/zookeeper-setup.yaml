@@ -73,7 +73,7 @@ spec:
           image: "tonybian/kubernetes-zookeeper:latest"
           resources:
             requests:
-              memory: "1Gi"
+              memory: ".5Gi"
               cpu: "0.5"
           ports:
             - containerPort: 2181
@@ -132,4 +132,4 @@ spec:
         accessModes: [ "ReadWriteOnce" ]
         resources:
           requests:
-            storage: 10Gi
+            storage: 5Gi
