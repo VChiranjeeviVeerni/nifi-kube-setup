@@ -34,7 +34,6 @@ spec:
       labels:
         app: my-nifi
     spec:
-      hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
         - name: nifi-container
@@ -52,12 +51,14 @@ spec:
               cpu: "1"
           env:
             - name: VERSION
-              value: "1.9"
+              value: "1.12.0"
             - name: NIFI_CLUSTER_IS_NODE
               value: "true"
             - name: NIFI_CLUSTER_NODE_PROTOCOL_PORT
               value: "9088"
             - name: NIFI_ELECTION_MAX_CANDIDATES
               value: "1"
+            - name: NIFI_ELECTION_MAX_WAIT
+                value: "5 mins"
             - name: NIFI_ZK_CONNECT_STRING
               value: "zk-0.zk-hs.default.svc.cluster.local:2181,zk-1.zk-hs.default.svc.cluster.local:2181,zk-2.zk-hs.default.svc.cluster.local:2181"
